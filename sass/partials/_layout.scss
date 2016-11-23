@@ -1,0 +1,391 @@
+/*  Reset CSS  */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* { 
+	margin:0;  
+	padding:0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font:12px/1.6 arial;
+}
+a { 
+	outline:0; 
+	text-decoration:none; 
+	color: #fff;
+}
+ol, ul {
+	list-style: none;
+}
+img { 
+	border:0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+// CUSTOM STYLE
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+// Scroll
+body {
+	width: 100%;
+	height: 800vh;
+	background-color: $bg-color;
+}
+
+// Logo
+#logo {
+	position: fixed;
+	top: 5%;
+	left: 10%;
+	height: 30px;
+	//background-color: red;
+
+	h1 {
+		font-size: 25px;
+		font-weight: bold;
+		color: $logo-color;
+	}
+
+}
+
+// Main Menu
+#main-menu {
+	position: fixed;
+	top: 5%;
+	right: 10%;
+	height: 30px;
+	//background-color: red;
+
+	li {
+		float: left;
+		margin-left: 60px;
+
+		a {
+			display: block;
+			font-size: 15px;
+			color: $main-menu-color;
+			padding-top: 5px;
+			@include transition(all, 0.4s, ease);
+
+			&:hover {
+				transform: scale(1.1);
+				color: #000;
+			}
+
+		}
+
+	}
+
+}
+
+// Sub Menu
+// #sub-menu {
+// 	position: fixed;
+// 	width: 50%;
+// 	bottom: 5%;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+
+// 	li {
+// 		float: left;
+// 		width: 12.5%;
+// 		padding-bottom: 5px;
+// 		text-align: center;
+// 	}
+
+// }
+
+// BG Text Ver.1
+// #bg-txt-container {
+// 	position: fixed;
+// 	width: 1000px;
+// 	overflow: hidden;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+// 	background-color: red;
+
+// 	.bg-txt {
+// 		font-size: 600px;
+// 		text-align: center;
+// 		color: rgba(0, 0, 0, 0.05);
+// 		font-family: 'Pinyon Script', cursive;
+// 		font-family: 'Mrs Sheppards', cursive;
+// 		font-family: 'Cormorant Garamond', serif;
+// 		font-family: 'Josefin Slab', serif;
+// 		font-family: 'Italiana', serif;
+// 		font-family: 'Lobster', cursive;
+// 		font-family: 'Chonburi', cursive;
+// 		font-family: 'Stardos Stencil', cursive;		
+		
+// 		span {
+// 			position: relative;
+// 		}
+
+// 		.char4, .char5, .char6 {
+// 			font-size: 100px;
+// 		}
+
+// 	}
+
+// }
+
+// BG Text Ver.2: Interactive Text Shadow
+#bg-txt-container {
+	position: fixed;
+	width: 100vw;
+	overflow: hidden;
+	background-color: transparent;
+	@include centerer;
+
+	.bg-txt {
+		font-size: 300px;
+		text-align: center;
+		color: $bg-txt-color;
+		text-shadow: -5px -3px 5px rgba(0, 0, 0, 0.2);
+		font-family: 'Pinyon Script', cursive;
+		font-family: 'Mrs Sheppards', cursive;
+		font-family: 'Cormorant Garamond', serif;
+		font-family: 'Josefin Slab', serif;
+		font-family: 'Italiana', serif;
+		font-family: 'Lobster', cursive;
+		font-family: 'Chonburi', cursive;
+		font-family: 'Stardos Stencil', cursive;		
+		
+		span {
+			position: relative;
+		}
+
+	}
+
+}
+
+// BG Text
+// #bg-txt-container {
+// 	position: fixed;
+// 	width: 100%;
+// 	height: 300px;
+// 	top: 50%;
+// 	margin-top: -100px;
+
+// 	p {
+// 		position: absolute;
+// 		width: 20%;
+// 		height: 300px;
+// 		text-align: center;
+// 		font-size: 300px;
+// 		color: rgba(0, 0, 0, 0.1);
+// 		font-weight: bold;
+// 	}
+
+// 	.bg-txt-w {
+// 		left: -10%;
+// 		top: 30%;
+// 	}
+
+// 	.bg-txt-o {
+// 		left: 25%;
+// 		top: -210%;
+// 	}
+
+// 	.bg-txt-r {
+// 		left: 60%;
+// 		top: 0%;
+// 	}
+
+// 	.bg-txt-k {
+// 		left: 87%;
+// 		top: 150%;
+// 	}
+
+// 	.bg-txt-s {
+// 		left: 47%;
+// 		top: 110%;
+// 	}
+
+// }
+
+
+// Portfolio
+section {
+	position: fixed;
+	width: 800vh;
+	height: 500px;
+	top: 50%;
+	margin-top: -250px;
+	left: 0;
+	padding-left: 78.7%;
+	//background-color: red;
+	//opacity: 0.6;
+
+	article {
+		position: relative;
+		width: 9.1%;
+		height: 400px;
+		top: 50%;
+		margin: 0.1%; 
+		margin-top: -200px;
+		float: left;
+		box-sizing: border-box;	
+		overflow: hidden;
+
+		@include transition(width, 0.4s, ease-in);
+
+		@include bp-medium {
+			width: 9.7%;
+		}
+
+		@include bp-small {
+			width: 10.3%;
+		}
+
+		h2 {
+			position: absolute;
+			text-transform: uppercase;
+			font-size: 50px;
+			font-family: 'Stardos Stencil', cursive;
+			font-weight: bold;
+			letter-spacing: 40px;
+			width: 30%;
+			padding-left: 22.5px;
+			cursor: pointer;
+			color: $main-title-color;
+			//@include transition(all, 0.4s, $easeInBack);
+			//@include transition(all, 0.4s, $easeInCubic);
+			@include transition(all, 0.4s, $easeOutSine);
+
+			&:hover {
+				letter-spacing: 10px;
+				opacity: 0.1;
+			}
+
+		}
+
+		.port-title {
+
+			span {
+				position: relative;
+				top: 0;
+			}
+
+			.char1, .char2 {
+				font-size: 20px;
+				letter-spacing: 5px;
+				color: rgba(0, 0, 0, 0.3);
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
