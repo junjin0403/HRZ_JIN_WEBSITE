@@ -180,11 +180,12 @@ section {
     width: 9.1%;
     height: 400px;
     top: 50%;
-    margin: 0.1%;
+    margin: 0.2%;
     margin-top: -200px;
     float: left;
     box-sizing: border-box;
     overflow: hidden;
+    cursor: pointer;
     -webkit-transition: width 0.4s ease-in;
     -moz-transition: width 0.4s ease-in;
     -ms-transition: width 0.4s ease-in;
@@ -196,6 +197,26 @@ section {
     @media only screen and (min-width: 320px) and (max-width: 620px) {
       section article {
         width: 10.3%; } }
+    section article:hover img {
+      opacity: 0.7;
+      left: 20%; }
+    section article:hover h2 {
+      letter-spacing: 10px;
+      opacity: 1; }
+    section article:hover .char2 {
+      top: -30px; }
+    section article img {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 120%;
+      height: auto;
+      opacity: 0.7;
+      -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
     section article h2 {
       position: absolute;
       text-transform: uppercase;
@@ -205,22 +226,24 @@ section {
       letter-spacing: 40px;
       width: 30%;
       padding-left: 22.5px;
-      cursor: pointer;
       color: #000;
       -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
       -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
       -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
       -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
       transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
-      section article h2:hover {
-        letter-spacing: 10px;
-        opacity: 0.1; }
     section article .port-title span {
       position: relative;
       top: 0; }
     section article .port-title .char1, section article .port-title .char2 {
+      left: -23px;
       font-size: 20px;
       letter-spacing: 5px;
-      color: rgba(0, 0, 0, 0.3); }
+      color: rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
 
 /*# sourceMappingURL=app.css.map */

@@ -319,11 +319,12 @@ section {
 		width: 9.1%;
 		height: 400px;
 		top: 50%;
-		margin: 0.1%; 
+		margin: 0.2%; 
 		margin-top: -200px;
 		float: left;
 		box-sizing: border-box;	
 		overflow: hidden;
+		cursor: pointer;
 
 		@include transition(width, 0.4s, ease-in);
 
@@ -335,6 +336,30 @@ section {
 			width: 10.3%;
 		}
 
+		&:hover img {
+			opacity: 0.7;
+			left: 20%;
+		}
+
+		&:hover h2 {
+			letter-spacing: 10px;
+			opacity: 1;
+		}
+
+		&:hover .char2 {
+			top: -30px;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 120%;
+			height: auto;
+			opacity: 0.7;
+			@include transition(all, 0.4s, $easeOutSine);
+		}
+
 		h2 {
 			position: absolute;
 			text-transform: uppercase;
@@ -344,17 +369,10 @@ section {
 			letter-spacing: 40px;
 			width: 30%;
 			padding-left: 22.5px;
-			cursor: pointer;
 			color: $main-title-color;
 			//@include transition(all, 0.4s, $easeInBack);
 			//@include transition(all, 0.4s, $easeInCubic);
 			@include transition(all, 0.4s, $easeOutSine);
-
-			&:hover {
-				letter-spacing: 10px;
-				opacity: 0.1;
-			}
-
 		}
 
 		.port-title {
@@ -365,14 +383,23 @@ section {
 			}
 
 			.char1, .char2 {
+				left: -23px;
 				font-size: 20px;
 				letter-spacing: 5px;
 				color: rgba(0, 0, 0, 0.3);
+				@include transition(all, 0.4s, $easeOutSine);
 			}
 
 		}
 
 	}
+
+	// article:nth-child(1) {
+	// 	background: url(../img/j43_logo_HRZ.png) no-repeat;
+	// 	background-position: 500px 0;
+	// 	background-size: cover;
+	// 	@include transition(background-position, 0.4s, $easeInBack);
+	// }
 
 }
 
