@@ -124,6 +124,7 @@ textarea {
 // Scroll
 body {
 	width: 100%;
+	//height: 0;
 	height: 800vh;
 	background-color: $bg-color;
 }
@@ -154,7 +155,7 @@ body {
 
 	li {
 		float: left;
-		margin-left: 60px;
+		margin-left: 35px;
 
 		a {
 			display: block;
@@ -172,6 +173,28 @@ body {
 
 	}
 
+}
+
+// Scroll Down
+#scroll-down {
+	position: fixed;
+	bottom: 5%;
+	left: 10%;
+	font-size: 15px;
+	padding-bottom: 5px;
+	transform: rotate(90deg);
+	margin-bottom: 37px;
+	margin-left: -37px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+// Hire Me
+#hire-me {
+	position: fixed;
+	bottom: 5%;
+	right: 10%;
+	font-size: 15px;
+	padding-bottom: 5px;
 }
 
 // Sub Menu
@@ -226,7 +249,33 @@ body {
 
 // }
 
-// BG Text Ver.2: Interactive Text Shadow
+// BG Text Detail
+#bg-txt-detail-container {
+	position: fixed;
+	width: 200px;
+	//background-color: transparent;
+	//@include centerer;
+	top: 60%;
+	left: 30%;
+
+	.bg-txt-detail {
+		font-size: 30px;
+		text-align: left;
+		color: rgba(0, 0, 0, 0.1);
+		line-height: 30px;
+		//text-shadow: -5px -3px 5px rgba(0, 0, 0, 0.2);
+		font-family: 'Stardos Stencil', cursive;		
+		
+		span {
+			position: relative;
+			display: block;
+		}
+
+	}
+
+}
+
+// BG Text: Interactive Text Shadow
 #bg-txt-container {
 	position: fixed;
 	width: 100vw;
@@ -235,9 +284,15 @@ body {
 	@include centerer;
 
 	.bg-txt {
-		font-size: 300px;
+		//opacity: 0;
+		font-size: 800px;
+		padding-top: 75px;
+		padding-left: 20px;
+		//font-weight: bold;
+		//font-size: 300px;
 		text-align: center;
 		color: $bg-txt-color;
+		//color: #000;
 		text-shadow: -5px -3px 5px rgba(0, 0, 0, 0.2);
 		font-family: 'Pinyon Script', cursive;
 		font-family: 'Mrs Sheppards', cursive;
@@ -246,13 +301,25 @@ body {
 		font-family: 'Italiana', serif;
 		font-family: 'Lobster', cursive;
 		font-family: 'Chonburi', cursive;
-		font-family: 'Stardos Stencil', cursive;		
+		font-family: 'Stardos Stencil', cursive;	
 		
 		span {
 			position: relative;
 		}
 
+		// .char2 {
+		// 	font-size: 200px;
+		// }
+
 	}
+
+	// .bg-txt::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	background-color: #000;
+	// 	width: 100%;
+	// 	height: 100%;
+	// }
 
 }
 
@@ -304,6 +371,8 @@ body {
 
 // Portfolio
 section {
+	//display: none;
+	//opacity: 0;
 	position: fixed;
 	width: 800vh;
 	height: 500px;
@@ -325,7 +394,6 @@ section {
 		box-sizing: border-box;	
 		overflow: hidden;
 		cursor: pointer;
-
 		@include transition(width, 0.4s, ease-in);
 
 		@include bp-medium {
@@ -346,7 +414,7 @@ section {
 			opacity: 1;
 		}
 
-		&:hover .char2 {
+		&:hover span:nth-child(2) {
 			top: -30px;
 		}
 
@@ -354,43 +422,79 @@ section {
 			position: absolute;
 			top: 0;
 			left: 100%;
-			width: 120%;
+			width: 125%;
 			height: auto;
 			opacity: 0.7;
-			@include transition(all, 0.4s, $easeOutSine);
+			@include transition(all, 0.7s, $easeOutSine);
 		}
 
 		h2 {
+			top: -80%;
 			position: absolute;
 			text-transform: uppercase;
-			font-size: 50px;
+			// font-size: 50px;
+			font-size: 40px;
 			font-family: 'Stardos Stencil', cursive;
 			font-weight: bold;
 			letter-spacing: 40px;
-			width: 30%;
+			width: 20%;
+			padding-top: 10px;
 			padding-left: 22.5px;
 			color: $main-title-color;
 			//@include transition(all, 0.4s, $easeInBack);
 			//@include transition(all, 0.4s, $easeInCubic);
-			@include transition(all, 0.4s, $easeOutSine);
+			@include transition(all, 0.7s, $easeOutSine);
 		}
 
 		.port-title {
 
+			// span {
+			// 	position: relative;
+			// 	top: 0;
+			// }
+
+			// .char1, .char2 {
+			// 	//left: -21px;
+			// 	left: 0;
+			// 	font-size: 20px;
+			// 	letter-spacing: 4px;
+			// 	color: rgba(0, 0, 0, 0.3);
+			// 	//color: #ddd;
+			// 	@include transition(all, 0.7s, $easeOutSine);
+			// }
+
 			span {
 				position: relative;
 				top: 0;
-			}
-
-			.char1, .char2 {
-				left: -23px;
+				left: 0;
 				font-size: 20px;
-				letter-spacing: 5px;
+				letter-spacing: 4px;
 				color: rgba(0, 0, 0, 0.3);
-				@include transition(all, 0.4s, $easeOutSine);
+				//color: #ddd;
+				@include transition(all, 0.7s, $easeOutSine);
 			}
 
 		}
+
+		// .port-title::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	background-color: #000;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 450%;
+		// 	height: 100%;
+		// }
+
+		// .port-title.motion::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	background-color: #000;
+		// 	top: 0;
+		// 	left: -450%;
+		// 	width: 450%;
+		// 	height: 100%;
+		// }
 
 	}
 
@@ -404,6 +508,92 @@ section {
 }
 
 
+// Modal Window
+.morph-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 400vh;
+	width: 100%;
+	//background-color: #000;
+	display: none;
+}
+
+.morph-modal.open-modal {
+	display: block;
+}
+
+.modal-content, 
+.close-modal {
+	opacity: 0;
+	transition: opacity 0.4s ease-in;
+	z-index: 2;
+}
+
+.modal-visible .modal-content, 
+.modal-visible .close-modal {
+	opacity: 1;
+}
+
+.modal-content {
+	position: relative;
+	overflow: auto;
+	padding: 40px 10%;
+	box-sizing: border-box;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.close-modal {
+	/*position: absolute;*/
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	/* replace text with image */
+	height: 56px;
+	width: 56px;
+	// background: rgba(0, 0, 0, .4);
+	// border-radius: 50%;
+	border: none;
+	text-indent: 100%;
+	overflow: hidden;
+	color: transparent;
+	white-space: nowrap;
+	transition: transform 0.4s ease-in;
+
+	&:hover {
+
+		transform: rotate(180deg);
+
+	}
+
+}
+
+.close-modal::before, .close-modal::after {
+	/* this is the 'X' arrow */
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 2px;
+	width: 24px;
+	background: #FFF;
+}
+
+.close-modal::before {
+	transform: translate(-50%) rotate(45deg); 
+}
+
+.close-modal::after {
+	transform: translate(-50%) rotate(-45deg); 
+}
+
+.close-modal:hover {
+	background: rgba(0, 0, 0, 0.6);
+}
 
 
 

@@ -128,7 +128,7 @@ body {
   height: 30px; }
   #main-menu li {
     float: left;
-    margin-left: 60px; }
+    margin-left: 35px; }
     #main-menu li a {
       display: block;
       font-size: 15px;
@@ -143,6 +143,39 @@ body {
         transform: scale(1.1);
         color: #000; }
 
+#scroll-down {
+  position: fixed;
+  bottom: 5%;
+  left: 10%;
+  font-size: 15px;
+  padding-bottom: 5px;
+  transform: rotate(90deg);
+  margin-bottom: 37px;
+  margin-left: -37px;
+  color: rgba(0, 0, 0, 0.3); }
+
+#hire-me {
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  font-size: 15px;
+  padding-bottom: 5px; }
+
+#bg-txt-detail-container {
+  position: fixed;
+  width: 200px;
+  top: 60%;
+  left: 30%; }
+  #bg-txt-detail-container .bg-txt-detail {
+    font-size: 30px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.1);
+    line-height: 30px;
+    font-family: 'Stardos Stencil', cursive; }
+    #bg-txt-detail-container .bg-txt-detail span {
+      position: relative;
+      display: block; }
+
 #bg-txt-container {
   position: fixed;
   width: 100vw;
@@ -152,9 +185,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); }
   #bg-txt-container .bg-txt {
-    font-size: 300px;
+    font-size: 800px;
+    padding-top: 75px;
+    padding-left: 20px;
     text-align: center;
-    color: #fff;
+    color: #000;
     text-shadow: -5px -3px 5px rgba(0, 0, 0, 0.2);
     font-family: 'Pinyon Script', cursive;
     font-family: 'Mrs Sheppards', cursive;
@@ -203,47 +238,116 @@ section {
     section article:hover h2 {
       letter-spacing: 10px;
       opacity: 1; }
-    section article:hover .char2 {
+    section article:hover span:nth-child(2) {
       top: -30px; }
     section article img {
       position: absolute;
       top: 0;
       left: 100%;
-      width: 120%;
+      width: 125%;
       height: auto;
       opacity: 0.7;
-      -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
+      -webkit-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -ms-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -o-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1); }
     section article h2 {
+      top: -80%;
       position: absolute;
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 40px;
       font-family: 'Stardos Stencil', cursive;
       font-weight: bold;
       letter-spacing: 40px;
-      width: 30%;
+      width: 20%;
+      padding-top: 10px;
       padding-left: 22.5px;
       color: #000;
-      -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
+      -webkit-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -ms-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -o-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1); }
     section article .port-title span {
       position: relative;
-      top: 0; }
-    section article .port-title .char1, section article .port-title .char2 {
-      left: -23px;
+      top: 0;
+      left: 0;
       font-size: 20px;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       color: rgba(0, 0, 0, 0.3);
-      -webkit-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -moz-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -ms-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      -o-transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-      transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1); }
+      -webkit-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -ms-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      -o-transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1); }
+
+.morph-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400vh;
+  width: 100%;
+  display: none; }
+
+.morph-modal.open-modal {
+  display: block; }
+
+.modal-content,
+.close-modal {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  z-index: 2; }
+
+.modal-visible .modal-content,
+.modal-visible .close-modal {
+  opacity: 1; }
+
+.modal-content {
+  position: relative;
+  overflow: auto;
+  padding: 40px 10%;
+  box-sizing: border-box;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+
+.close-modal {
+  /*position: absolute;*/
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* replace text with image */
+  height: 56px;
+  width: 56px;
+  border: none;
+  text-indent: 100%;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  transition: transform 0.4s ease-in; }
+  .close-modal:hover {
+    transform: rotate(180deg); }
+
+.close-modal::before, .close-modal::after {
+  /* this is the 'X' arrow */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 24px;
+  background: #FFF; }
+
+.close-modal::before {
+  transform: translate(-50%) rotate(45deg); }
+
+.close-modal::after {
+  transform: translate(-50%) rotate(-45deg); }
+
+.close-modal:hover {
+  background: rgba(0, 0, 0, 0.6); }
 
 /*# sourceMappingURL=app.css.map */
