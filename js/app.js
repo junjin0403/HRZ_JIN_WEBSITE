@@ -5,11 +5,18 @@ $(document).ready(function(){
 	var bgTxt = $('.bg-txt');
 	var section = $('section');
 	var portTitle = $('.port-title');
+	var logoEl = $('.logo-el');
+	var mainMenuLi = $('#main-menu').children('li');
+	var mainMenuAbout = $('.main-menu-about').children('a');
+	var mainMenuContact = $('.main-menu-contact').children('a');
 	var landingTl = new TimelineMax();
 
 	landingTl
-		.to(bgTxt, 3, {css: {color: '#fff'}, ease: Power0.easeIn, onStart: onStart})
-		.to(portTitle, 3, {top: '0', ease: Power0.easeIn}, '-=3')
+		.to(bgTxt, 2.5, {css: {color: '#fff'}, ease: Power0.easeIn, onStart: onStart})
+		.to(portTitle, 2.5, {top: '0', ease: Power0.easeIn}, '-=2.5')
+		.to(logoEl, 0.3, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '+=0.7')
+		.to(mainMenuAbout, 0.1, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '+=0.1')
+		.to(mainMenuContact, 0.1, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '+=0.1')
 		.add(scrollRe, '+=1');
 		//.fromTo(section, 5, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeIn}, '-=5')
 
@@ -52,7 +59,7 @@ $(document).ready(function(){
 	      "text-shadow": x/70+"px "+y/70+"px 10px rgba(0,0,0,0.2)",
 	    });
 
-	  });
+	});
 
 
 	// SCROLL MAGIC
@@ -106,22 +113,60 @@ $(document).ready(function(){
 			var modalClose = selectedModalWindow.children('.close-modal');
 			var body = $('body');
 			var section = $('section');
+			var article = section.children('article');
+			var workTitle =	$('.work-title');
+			var workSummary = $('.work-summary');
+			var workDetail = $('.work-detail');
+			var workVideo = $('.work-video');
+			var mainMenuBack = $('.main-menu-back').children('a');
+			var workImage = $('.work-image');
+			var workIndex = $('.work-index');
 			var modalTl = new TimelineMax();
 			//show the modal window 
 			//selectedModalWindow.addClass('open-modal');
 
 			modalTl
-				.to(section, 0.25, {autoAlpha: 0, ease: Power0.easeIn})
-				.to(body, 0.1, {css: {height: '0'}})
-				.to(selectedModalWindow, 0.1, {css: {display: 'block'}})
-				.to(section, 0.1, {css: {display: 'none'}})
-				.to(modalContent, 0.25, {autoAlpha: 1, ease: Power0.easeIn})
-				.to(modalClose, 0.25, {autoAlpha: 1, ease: Power0.easeIn});
+				//.to(section, 0.25, {autoAlpha: 0, ease: Power0.easeIn})
+				.staggerTo(article, 0.2, {y: '8%', autoAlpha: 0, ease: Power0.easeIn, onStart: modalBinding}, 0.25)
+				.to(body, 0.01, {css: {height: '0'}})
+				.to(section, 0.01, {css: {display: 'none'}, ease: Power0.easeIn})
+				.to(selectedModalWindow, 0.01, {css: {display: 'block'}})	
+				//.to(modalContent, 0.01, {autoAlpha: 1, ease: Power0.easeIn})
+				.fromTo(workTitle, 0.3, {autoAlpha: 0, top: '-50'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.05')
+				.fromTo(workSummary, 0.3, {autoAlpha: 0, top: '-50'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.05')
+				.fromTo(workDetail, 0.3, {autoAlpha: 0, top: '-50'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.05')
+				.fromTo(workVideo, 0.3, {autoAlpha: 0, top: '-50'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.05')
+				.fromTo(workImage, 0.3, {autoAlpha: 0, top: '-50'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.05')
+				// .fromTo(workIndex, 0.2, {autoAlpha: 0, top: '-60'}, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '-=0.1')
+				.to(mainMenuBack, 0.1, {autoAlpha: 1, top: '0', ease: Power0.easeIn}, '+=0.25')
+				.add(modalScroll);
+
+			function modalBinding() {
+
+				//$('body').css({'overflow':'hidden'});
+  				$(document).bind('scroll', function () { 
+    		   		window.scrollTo(0,0); 
+  				});
+		
+			}
+
+			function modalScroll() {
+
+				$(document).unbind('scroll');
+
+			}
 
 			// body.css({'height': '0'});
 			// section.css({'display': 'none'});
 			// selectedModalWindow.addClass('modal-visible');
+
+			// MainMenuBack Button
+			mainMenuBack.on('click', function(event){
+				event.preventDefault();
+				modalTl.reverse();
+			});
 		});
+
 
 
 	// MODAL TRIGGER
